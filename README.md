@@ -1,4 +1,4 @@
-## Dynatrace BizOps Dashboards
+## Dynatrace EasyTravel BizOps Dashboards
 
 If you previously loaded one of my old fastpacks, make sure to delete the old measures, BTs and Incidents. Layering this on top will create "copies" and there is a few bugs in the old fastpack. 
 
