@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from Dynatrace Support -->
+<dynatrace version="6.1.0.7880" date="8/26/16 9:27 AM">
+  <dashboardconfig memento.version="6.1.0.7880" suppresssavewarning="false" created="2016-08-19T10:50:48-0400" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" modifiedbyname="admin" locationascomparesource="false" source="server://tag009441091191" sessionid="MyApp" opendrilldowninnewdashboard="true" groupname="" autoreplacesession="false" revision="00000156-c708-3eec-82a5-de5748d8f9cc" locationassource="false" localizationenabled="false" name="Mobile Travel WorkFlow" authorname="admin" modified="2016-08-26T09:27:01-0400" id="3e9419de-7abc-418e-b587-9915e89a6be9">
+    <reportconfig print.images="true" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" orientation="portrait" description="" title="" type="PDF" enabled="true" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" lines.per.table="100" pagesize="A4" override="false" optimizeequalcolumns="true" print.legends="true" levels.per.tree="10" />
+    <filter>
+      <criterion type="admfilteranalyzer" />
+      <criterion mode="all" type="agents" completepurepath="true">
+        <textpattern name="agentname" type="contains" enabled="true" />
+        <textpattern name="agenthost" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="and" />
+      <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+      <criterion mode="all" type="applications" />
+      <criterion type="btm" />
+      <criterion type="casuemdimension" />
+      <criterion type="dbdetails" />
+      <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+      <criterion analyzeserverpath="true" analyzeclienterrors="false" isactive="true" analyzeenduserpath="true" type="enduserpath" />
+      <criterion mode="all" type="hosts" completepurepath="true" />
+      <criterion severitiesmode="all" statesmode="all" type="incident" rulesmode="all" severities="" states="" />
+      <criterion type="or" />
+      <criterion mode="all" enduser="false" type="purepaths" />
+      <criterion includemeasurename="true" includeplatform="true" includetestname="true" teststatus="FAILED,INVALIDATED,VOLATILE,DEGRADED,IMPROVED,MISSING,passed" type="tests" testcategory="UNIT,BROWSER_TIMER,BROWSER_AUTO_TIMER,PERFORMANCE,LOAD,WEB_API" />
+      <criterion includeplatform="true" type="testsoverview" />
+      <criterion type="threads" enabled="false" filterbyid="false" />
+      <criterion type="timeframe">
+        <timeframe type="Last 30min" />
+      </criterion>
+      <criterion useendtimefortimeframefilter="false" type="visits">
+        <visitidset />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern name="timerName" type="contains" enabled="true" />
+        <textpattern name="pageContext" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern match="contains" text="" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern match="contains" text="" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+    <designconfig autoscroll="false" namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" namefontfamily="Bernina Sans Light" clienttheme="DEFAULT" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" autoadjustfontsizes="false" />
+    <dashboardlayout>
+      <portletfolder selectionindex="-1" relationtype="LEFT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@64dbf1b" relatedfolderid="DashboardLayout.blankArea" ratio="0.95" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@1a3f2293" relatedfolderid="org.eclipse.ui.internal.ViewStack@64dbf1b" ratio="0.75" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@142ca010" relatedfolderid="org.eclipse.ui.internal.ViewStack@1a3f2293" ratio="0.6" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@4d28e08d" relatedfolderid="org.eclipse.ui.internal.ViewStack@142ca010" ratio="0.32417583" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@68f6ba79" relatedfolderid="org.eclipse.ui.internal.ViewStack@4d28e08d" ratio="0.42802197" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@754db063" relatedfolderid="org.eclipse.ui.internal.ViewStack@1a3f2293" ratio="0.46593407" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@80e1ac7" relatedfolderid="org.eclipse.ui.internal.ViewStack@754db063" ratio="0.20659341" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@3919c41a" relatedfolderid="org.eclipse.ui.internal.ViewStack@80e1ac7" ratio="0.48351648" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@c0fcca3" relatedfolderid="org.eclipse.ui.internal.ViewStack@1a3f2293" ratio="0.44945055" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@6d51cc69" relatedfolderid="org.eclipse.ui.internal.ViewStack@c0fcca3" ratio="0.45494506" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@513e5ab3" relatedfolderid="org.eclipse.ui.internal.ViewStack@64dbf1b" ratio="0.7456522" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@7fc3936" relatedfolderid="org.eclipse.ui.internal.ViewStack@64dbf1b" ratio="0.73913044" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@47e0d6a5" relatedfolderid="org.eclipse.ui.internal.ViewStack@7fc3936" ratio="0.06978022" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@5e40b61f" relatedfolderid="org.eclipse.ui.internal.ViewStack@47e0d6a5" ratio="0.47802198" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@79695299" relatedfolderid="org.eclipse.ui.internal.ViewStack@5e40b61f" ratio="0.5862637" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@6a0fa9fc" relatedfolderid="org.eclipse.ui.internal.ViewStack@5e40b61f" ratio="0.48351648" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@751e37" relatedfolderid="org.eclipse.ui.internal.ViewStack@47e0d6a5" ratio="0.53186816" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@26115e29" relatedfolderid="org.eclipse.ui.internal.ViewStack@47e0d6a5" ratio="0.37692308" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@407a75ca" relatedfolderid="org.eclipse.ui.internal.ViewStack@64dbf1b" ratio="0.73478264" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@3437d13d" relatedfolderid="org.eclipse.ui.internal.ViewStack@64dbf1b" ratio="0.73478264" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@4b56fd3" relatedfolderid="org.eclipse.ui.internal.ViewStack@3437d13d" ratio="0.6" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@71bc8c56" relatedfolderid="org.eclipse.ui.internal.ViewStack@4b56fd3" ratio="0.36263737" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@205416df" relatedfolderid="org.eclipse.ui.internal.ViewStack@71bc8c56" ratio="0.32692307" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@1c6beb3e" relatedfolderid="org.eclipse.ui.internal.ViewStack@205416df" ratio="0.42967033" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@198686e6" relatedfolderid="org.eclipse.ui.internal.ViewStack@3437d13d" ratio="0.46593407" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@7459d8d2" relatedfolderid="org.eclipse.ui.internal.ViewStack@198686e6" ratio="0.47802198" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@5b2fc844" relatedfolderid="org.eclipse.ui.internal.ViewStack@3437d13d" ratio="0.7032967" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@68384825" relatedfolderid="org.eclipse.ui.internal.ViewStack@3437d13d" ratio="0.6043956" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@3890ba84" relatedfolderid="org.eclipse.ui.internal.ViewStack@3437d13d" ratio="0.64340657" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@bc67b54" relatedfolderid="org.eclipse.ui.internal.ViewStack@64dbf1b" ratio="0.7217391" />
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="942ed7cb-5978-46ed-9ebc-f2beaf528e7d" folderid="org.eclipse.ui.internal.ViewStack@54f1083e" relatedfolderid="org.eclipse.ui.internal.ViewStack@64dbf1b" ratio="0.26086956">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="HEADLESS" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="5d728121-8bec-4b1d-9263-8e527500d2a6" folderid="org.eclipse.ui.internal.ViewStack@401c0f27" relatedfolderid="org.eclipse.ui.internal.ViewStack@54f1083e" ratio="0.23152174">
+        <designconfig namefontsize="14" descriptionfontfamily="Franklin Gothic Heavy" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="NORMAL" descriptionfontsize="8" namefontfamily="Segoe UI" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@1e8e3027" relatedfolderid="org.eclipse.ui.internal.ViewStack@401c0f27" ratio="0.8236264" />
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="d53ea4a4-1a11-40c2-aad0-a38aa1d31503" folderid="org.eclipse.ui.internal.ViewStack@48c82c02" relatedfolderid="org.eclipse.ui.internal.ViewStack@401c0f27" ratio="0.28296703">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="NORMAL" descriptionfontsize="8" namefontfamily="Segoe UI" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="8d37c850-f592-452a-a94a-e080cc2c1339" folderid="org.eclipse.ui.internal.ViewStack@60bf9934" relatedfolderid="org.eclipse.ui.internal.ViewStack@48c82c02" ratio="0.6038314">
+        <designconfig namefontsize="14" descriptionshow="false" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="NORMAL" descriptionfontsize="8" namefontfamily="Segoe UI" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@683c5345" relatedfolderid="org.eclipse.ui.internal.ViewStack@64dbf1b" ratio="0.07083333" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@74c39390" relatedfolderid="org.eclipse.ui.internal.ViewStack@683c5345" ratio="0.07083333" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@694be538" relatedfolderid="org.eclipse.ui.internal.ViewStack@74c39390" ratio="0.31373626" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@5fcb507e" relatedfolderid="org.eclipse.ui.internal.ViewStack@694be538" ratio="0.4" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@288564a4" relatedfolderid="org.eclipse.ui.internal.ViewStack@5fcb507e" ratio="0.6401099" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@137fe94c" relatedfolderid="org.eclipse.ui.internal.ViewStack@288564a4" ratio="0.16978022" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@4586504e" relatedfolderid="org.eclipse.ui.internal.ViewStack@137fe94c" ratio="0.25416666" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@c10bb5c" relatedfolderid="org.eclipse.ui.internal.ViewStack@4586504e" ratio="0.35416666" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@6b32aef5" relatedfolderid="org.eclipse.ui.internal.ViewStack@137fe94c" ratio="0.48021978" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@4d638c53" relatedfolderid="org.eclipse.ui.internal.ViewStack@6b32aef5" ratio="0.48021978" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@347affda" relatedfolderid="org.eclipse.ui.internal.ViewStack@6b32aef5" ratio="0.49065933" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@4ccda029" relatedfolderid="org.eclipse.ui.internal.ViewStack@6b32aef5" ratio="0.46666667" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@48ab6d40" relatedfolderid="org.eclipse.ui.internal.ViewStack@6b32aef5" ratio="0.45416668" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@91afa71" relatedfolderid="org.eclipse.ui.internal.ViewStack@6b32aef5" ratio="0.45416668" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@549d0d8c" relatedfolderid="org.eclipse.ui.internal.ViewStack@91afa71" ratio="0.4565934" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@5f79b584" relatedfolderid="org.eclipse.ui.internal.ViewStack@549d0d8c" ratio="0.45416668" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@9bff49c" relatedfolderid="org.eclipse.ui.internal.ViewStack@288564a4" ratio="0.15833333" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@356b521a" relatedfolderid="org.eclipse.ui.internal.ViewStack@5fcb507e" ratio="0.05" />
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="a7e620cb-cda9-4a71-ba4a-c378c3c178ed" folderid="org.eclipse.ui.internal.ViewStack@6d0894c2" relatedfolderid="org.eclipse.ui.internal.ViewStack@356b521a" ratio="0.22857143">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="1b6719e9-124a-4845-b921-3875d57f6183" folderid="org.eclipse.ui.internal.ViewStack@25b52d72" relatedfolderid="org.eclipse.ui.internal.ViewStack@6d0894c2" ratio="0.09725275">
+        <designconfig namefontsize="14" descriptionfontfamily="Segoe UI" descriptionshow="true" headertype="CUSTOM" namefontcolor="0,128,255" nameshow="false" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="14" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="d9fb533b-f7ff-41c9-9343-2a62e8b20888" folderid="org.eclipse.ui.internal.ViewStack@b6eb9ae" relatedfolderid="org.eclipse.ui.internal.ViewStack@25b52d72" ratio="0.16250761">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="58674459-9315-4030-88db-43f9d218b152" folderid="org.eclipse.ui.internal.ViewStack@261356a0" relatedfolderid="org.eclipse.ui.internal.ViewStack@25b52d72" ratio="0.4875">
+        <designconfig namefontsize="14" descriptionfontfamily="Franklin Gothic Heavy" descriptionshow="true" headertype="HEADLESS" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="BOLD" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="14" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="6ecc24ea-c957-494f-ab38-83a087987074" folderid="org.eclipse.ui.internal.ViewStack@78df0b11" relatedfolderid="org.eclipse.ui.internal.ViewStack@261356a0" ratio="0.45528457">
+        <designconfig namefontsize="14" descriptionfontfamily="Franklin Gothic Heavy" descriptionshow="true" headertype="HEADLESS" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="BOLD" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="14" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="4d083eb6-debe-4887-9317-c7a1d026f419" folderid="org.eclipse.ui.internal.ViewStack@5a75bdf1" relatedfolderid="org.eclipse.ui.internal.ViewStack@78df0b11" ratio="0.3880597">
+        <designconfig namefontsize="14" descriptionfontfamily="Franklin Gothic Heavy" descriptionshow="true" headertype="HEADLESS" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="BOLD" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="14" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="710b26a5-5802-470e-b2bc-26a2753311c0" folderid="org.eclipse.ui.internal.ViewStack@790becb8" relatedfolderid="org.eclipse.ui.internal.ViewStack@356b521a" ratio="0.14182693">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="aad04eea-31a3-4acb-b645-0970f2dcecf6" folderid="org.eclipse.ui.internal.ViewStack@512150d3" relatedfolderid="org.eclipse.ui.internal.ViewStack@790becb8" ratio="0.17067307">
+        <designconfig namefontsize="14" descriptionfontfamily="Segoe UI" descriptionshow="true" headertype="CUSTOM" namefontcolor="0,128,255" nameshow="false" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="14" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="baee0d04-401c-4881-988d-6831a4168605" folderid="org.eclipse.ui.internal.ViewStack@4ade04bf" relatedfolderid="org.eclipse.ui.internal.ViewStack@512150d3" ratio="0.46666667">
+        <designconfig namefontsize="14" descriptionfontfamily="Franklin Gothic Heavy" descriptionshow="true" headertype="CUSTOM" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="BOLD" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="14" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="9744ff0c-274b-4ab3-83ce-94fbd078ff14" folderid="org.eclipse.ui.internal.ViewStack@3e30395a" relatedfolderid="org.eclipse.ui.internal.ViewStack@512150d3" ratio="0.44642857">
+        <designconfig namefontsize="14" descriptionfontfamily="Franklin Gothic Heavy" descriptionshow="true" headertype="CUSTOM" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="BOLD" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="14" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="b0e825d5-b3e0-40e6-baae-751409328e8f" folderid="org.eclipse.ui.internal.ViewStack@c0ccda4" relatedfolderid="org.eclipse.ui.internal.ViewStack@512150d3" ratio="0.44">
+        <designconfig namefontsize="14" descriptionfontfamily="Franklin Gothic Heavy" descriptionshow="true" headertype="HEADLESS" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="BOLD" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="14" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="75a18e43-71a9-4d31-85f5-dd6c8ebb2885" folderid="org.eclipse.ui.internal.ViewStack@48c34e11" relatedfolderid="org.eclipse.ui.internal.ViewStack@356b521a" ratio="0.33898306">
+        <designconfig namefontsize="14" descriptionfontfamily="Segoe UI" descriptionshow="true" headertype="CUSTOM" namefontcolor="0,128,255" nameshow="false" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="14" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="98a8c67f-5df6-43ca-abbd-8017ed0c547f" folderid="org.eclipse.ui.internal.ViewStack@46fe3a1d" relatedfolderid="org.eclipse.ui.internal.ViewStack@48c34e11" ratio="0.46666667">
+        <designconfig namefontsize="14" descriptionfontfamily="Franklin Gothic Heavy" descriptionshow="true" headertype="CUSTOM" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="BOLD" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="14" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="39e1e1d7-2b8b-479e-a1bb-68e30cf71d0c" folderid="org.eclipse.ui.internal.ViewStack@72a6984c" relatedfolderid="org.eclipse.ui.internal.ViewStack@48c34e11" ratio="0.44642857">
+        <designconfig namefontsize="14" descriptionfontfamily="Franklin Gothic Heavy" descriptionshow="true" headertype="CUSTOM" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="BOLD" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="14" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="612f75ea-7afc-4de7-ade5-eecc191efc43" folderid="org.eclipse.ui.internal.ViewStack@6fe3e951" relatedfolderid="org.eclipse.ui.internal.ViewStack@48c34e11" ratio="0.44">
+        <designconfig namefontsize="14" descriptionfontfamily="Franklin Gothic Heavy" descriptionshow="true" headertype="HEADLESS" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="BOLD" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="14" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@34d9635a" relatedfolderid="org.eclipse.ui.internal.ViewStack@694be538" ratio="0.76648355" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@266ea0a3" relatedfolderid="org.eclipse.ui.internal.ViewStack@34d9635a" ratio="0.46666667" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@43561c08" relatedfolderid="org.eclipse.ui.internal.ViewStack@34d9635a" ratio="0.46666667" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@14f99902" relatedfolderid="org.eclipse.ui.internal.ViewStack@34d9635a" ratio="0.44166666" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@26d27bc7" relatedfolderid="org.eclipse.ui.internal.ViewStack@694be538" ratio="0.7692308" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@5a328664" relatedfolderid="org.eclipse.ui.internal.ViewStack@694be538" ratio="0.5796703" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@603d527" relatedfolderid="org.eclipse.ui.internal.ViewStack@5a328664" ratio="0.46666667" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@83d825f" relatedfolderid="org.eclipse.ui.internal.ViewStack@5a328664" ratio="0.46666667" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@72ad5d70" relatedfolderid="org.eclipse.ui.internal.ViewStack@83d825f" ratio="0.44166666" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@5dd9fcac" relatedfolderid="org.eclipse.ui.internal.ViewStack@83d825f" ratio="0.35416666" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@7752d5ce" relatedfolderid="org.eclipse.ui.internal.ViewStack@694be538" ratio="0.4945055" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@1932630a" relatedfolderid="org.eclipse.ui.internal.ViewStack@694be538" ratio="0.46666667" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@48274db3" relatedfolderid="org.eclipse.ui.internal.ViewStack@1932630a" ratio="0.45416668" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@4ada384b" relatedfolderid="org.eclipse.ui.internal.ViewStack@694be538" ratio="0.44166666" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@4d42b8fa" relatedfolderid="org.eclipse.ui.internal.ViewStack@694be538" ratio="0.44166666" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@6b0f849d" relatedfolderid="org.eclipse.ui.internal.ViewStack@74c39390" ratio="0.54991245" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@72e1fd04" relatedfolderid="org.eclipse.ui.internal.ViewStack@6b0f849d" ratio="0.31666666" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@3777f220" relatedfolderid="org.eclipse.ui.internal.ViewStack@6b0f849d" ratio="0.46666667" />
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="18c2552f-e13b-41b3-9789-6cc6036fbce7" folderid="org.eclipse.ui.internal.ViewStack@28d5785" relatedfolderid="org.eclipse.ui.internal.ViewStack@3777f220" ratio="0.46666667">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="d7322756-c4c4-4c40-bc9d-3294a6199d1b" folderid="org.eclipse.ui.internal.ViewStack@1d0534c" relatedfolderid="org.eclipse.ui.internal.ViewStack@6b0f849d" ratio="0.44642857">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="de6f6d26-5360-4f7b-be92-bab32b577cf3" folderid="org.eclipse.ui.internal.ViewStack@1d982f77" relatedfolderid="org.eclipse.ui.internal.ViewStack@1d0534c" ratio="0.375">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@42a2a7ef" relatedfolderid="org.eclipse.ui.internal.ViewStack@1d0534c" ratio="0.30952382" />
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="df4af852-4cbc-4a19-a992-ab34e48b4900" folderid="org.eclipse.ui.internal.ViewStack@43f3c191" relatedfolderid="org.eclipse.ui.internal.ViewStack@1d0534c" ratio="0.30952382">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@3eb4a66c" relatedfolderid="org.eclipse.ui.internal.ViewStack@74c39390" ratio="0.51666665" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@67022059" relatedfolderid="org.eclipse.ui.internal.ViewStack@74c39390" ratio="0.40416667" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@1b663596" relatedfolderid="org.eclipse.ui.internal.ViewStack@67022059" ratio="0.46666667" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@33f2b93e" relatedfolderid="org.eclipse.ui.internal.ViewStack@1b663596" ratio="0.46666667" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@3e4597ba" relatedfolderid="org.eclipse.ui.internal.ViewStack@33f2b93e" ratio="0.425" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@11a0ec5d" relatedfolderid="org.eclipse.ui.internal.ViewStack@33f2b93e" ratio="0.33333334" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@5f7ed5b4" relatedfolderid="org.eclipse.ui.internal.ViewStack@67022059" ratio="0.44166666" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@53301bd4" relatedfolderid="org.eclipse.ui.internal.ViewStack@64dbf1b" ratio="0.2423077" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@63b5fec5" relatedfolderid="org.eclipse.ui.internal.ViewStack@53301bd4" ratio="0.0" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@43590699" relatedfolderid="org.eclipse.ui.internal.ViewStack@63b5fec5" ratio="0.6725275" />
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="73cf732d-5414-4b73-847c-1675eb4bac95" folderid="org.eclipse.ui.internal.ViewStack@2a824bac" relatedfolderid="org.eclipse.ui.internal.ViewStack@63b5fec5" ratio="0.53186816">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="dd8cce92-3f48-4e31-9f88-04c0cd6ec910" folderid="org.eclipse.ui.internal.ViewStack@5b82250" relatedfolderid="org.eclipse.ui.internal.ViewStack@2a824bac" ratio="0.11764706">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="HEADLESS" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" locationascomparesource="false" source="server://tag009441091191" sessionid="MyApp" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@60bf9934" locationassource="false" addfilterinfo="false" name="Visits" ismaster="false" typeid="com.dynatrace.diagnostics.eue.dashlet.Visit" id="8d37c850-f592-452a-a94a-e080cc2c1339" displaymode="Base">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="39" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="INACTIVE" type="analysiscache" />
+        <criterion type="and" />
+        <criterion mode="all" type="applications" />
+        <criterion type="btm">
+          <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Mobile Search" />
+          <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Mobile Book" />
+          <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Mobile Login" />
+        </criterion>
+        <criterion type="casuemdimension" />
+        <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+        <criterion type="or" />
+        <criterion mode="all" enduser="false" type="purepaths" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <datamodelconfig>
+        <table sortcolumn="3" drawcolumn="-1" columnorder="0,1,2,47,3,4,5,6,7,8,39,40,9,10,11,55,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,41,42,43,44,45,46,48,49,50,51,52,53,54,56">
+          <column forcevisible="false" hidden="false" width="316" index="0" sort="None" />
+          <column forcevisible="false" hidden="false" width="80" index="1" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="80" index="3" sort="Down" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="6" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="7" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="8" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="9" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="10" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="11" sort="None" />
+          <column forcevisible="false" hidden="false" width="88" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="13" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="14" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="17" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="18" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="19" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="20" sort="None" />
+          <column forcevisible="false" hidden="false" width="80" index="21" sort="None" />
+          <column forcevisible="false" hidden="true" width="200" index="22" sort="None" />
+          <column forcevisible="false" hidden="true" width="80" index="23" sort="None" />
+          <column forcevisible="false" hidden="true" width="250" index="24" sort="None" />
+          <column forcevisible="false" hidden="true" width="250" index="25" sort="None" />
+          <column forcevisible="false" hidden="true" width="250" index="26" sort="None" />
+          <column forcevisible="false" hidden="true" width="250" index="27" sort="None" />
+          <column forcevisible="false" hidden="true" width="250" index="28" sort="None" />
+          <column forcevisible="false" hidden="true" width="250" index="29" sort="None" />
+          <column forcevisible="false" hidden="true" width="250" index="30" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="31" sort="None" />
+          <column forcevisible="false" hidden="true" width="80" index="32" sort="None" />
+          <column forcevisible="false" hidden="true" width="80" index="33" sort="None" />
+          <column forcevisible="false" hidden="true" width="80" index="34" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="35" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="36" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="37" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="38" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="39" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="40" sort="None" />
+          <column forcevisible="false" hidden="true" width="250" index="41" sort="None" />
+          <column forcevisible="false" hidden="true" width="250" index="42" sort="None" />
+          <column forcevisible="false" hidden="true" width="250" index="43" sort="None" />
+          <column forcevisible="false" hidden="true" width="250" index="44" sort="None" />
+          <column forcevisible="false" hidden="true" width="80" index="45" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="46" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="47" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="48" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="49" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="50" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="51" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="52" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="53" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="54" sort="None" />
+          <column forcevisible="false" hidden="false" width="148" index="55" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="56" sort="None" />
+        </table>
+        <visittableconfig>
+          <table sortcolumn="3" drawcolumn="-1" columnorder="0,1,2,47,3,4,5,6,7,8,39,40,9,10,11,55,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,41,42,43,44,45,46,48,49,50,51,52,53,54,56">
+            <column forcevisible="false" hidden="false" width="316" index="0" sort="None" />
+            <column forcevisible="false" hidden="false" width="80" index="1" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="2" sort="None" />
+            <column forcevisible="false" hidden="false" width="80" index="3" sort="Down" />
+            <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="5" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="6" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="7" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="8" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="9" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="10" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="11" sort="None" />
+            <column forcevisible="false" hidden="false" width="88" index="12" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="13" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="14" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="15" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="16" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="17" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="18" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="19" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="20" sort="None" />
+            <column forcevisible="false" hidden="false" width="80" index="21" sort="None" />
+            <column forcevisible="false" hidden="true" width="200" index="22" sort="None" />
+            <column forcevisible="false" hidden="true" width="80" index="23" sort="None" />
+            <column forcevisible="false" hidden="true" width="250" index="24" sort="None" />
+            <column forcevisible="false" hidden="true" width="250" index="25" sort="None" />
+            <column forcevisible="false" hidden="true" width="250" index="26" sort="None" />
+            <column forcevisible="false" hidden="true" width="250" index="27" sort="None" />
+            <column forcevisible="false" hidden="true" width="250" index="28" sort="None" />
+            <column forcevisible="false" hidden="true" width="250" index="29" sort="None" />
+            <column forcevisible="false" hidden="true" width="250" index="30" sort="None" />
+            <column forcevisible="false" hidden="true" width="100" index="31" sort="None" />
+            <column forcevisible="false" hidden="true" width="80" index="32" sort="None" />
+            <column forcevisible="false" hidden="true" width="80" index="33" sort="None" />
+            <column forcevisible="false" hidden="true" width="80" index="34" sort="None" />
+            <column forcevisible="false" hidden="false" width="40" index="35" sort="None" />
+            <column forcevisible="false" hidden="true" width="40" index="36" sort="None" />
+            <column forcevisible="false" hidden="true" width="40" index="37" sort="None" />
+            <column forcevisible="false" hidden="true" width="40" index="38" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="39" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="40" sort="None" />
+            <column forcevisible="false" hidden="true" width="250" index="41" sort="None" />
+            <column forcevisible="false" hidden="true" width="250" index="42" sort="None" />
+            <column forcevisible="false" hidden="true" width="250" index="43" sort="None" />
+            <column forcevisible="false" hidden="true" width="250" index="44" sort="None" />
+            <column forcevisible="false" hidden="true" width="80" index="45" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="46" sort="None" />
+            <column forcevisible="false" hidden="true" width="150" index="47" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="48" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="49" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="50" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="51" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="52" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="53" sort="None" />
+            <column forcevisible="false" hidden="true" width="50" index="54" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="55" sort="None" />
+            <column forcevisible="false" hidden="true" width="150" index="56" sort="None" />
+          </table>
+        </visittableconfig>
+        <clickpathtableconfig>
+          <table sortcolumn="4" drawcolumn="-1" columnorder="0,1,2,3,6,5,11,4,7,8,9,10,12,13">
+            <column forcevisible="false" hidden="false" width="20" index="0" sort="None" />
+            <column forcevisible="false" hidden="false" width="228" index="1" sort="None" />
+            <column forcevisible="false" hidden="true" width="150" index="2" sort="None" />
+            <column forcevisible="false" hidden="false" width="88" index="3" sort="None" />
+            <column forcevisible="false" hidden="false" width="140" index="4" sort="Up" />
+            <column forcevisible="false" hidden="false" width="160" index="5" sort="None" />
+            <column forcevisible="false" hidden="false" width="148" index="6" sort="None" />
+            <column forcevisible="false" hidden="false" width="80" index="7" sort="None" />
+            <column forcevisible="false" hidden="false" width="80" index="8" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="9" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="10" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="11" sort="None" />
+            <column forcevisible="false" hidden="false" width="100" index="12" sort="None" />
+            <column forcevisible="false" hidden="true" width="100" index="13" sort="None" />
+          </table>
+        </clickpathtableconfig>
+        <structurebuilderconfig>
+          <structure filter="true" advanced="false" grouping="UserExperience, UserExperienceReason" />
+        </structurebuilderconfig>
+      </datamodelconfig>
+      <analyzerparameters analyzerrecordlimit="100000" requiredrilldowndata="true" recordlimitdetails="100000" />
+      <chart axis.x.title="" axis.y.title.show="false" showtooltips="false" bounds.y.enabled="false" showvalues="true" showtitle="true" logxaxis="false" title="" resolution="Auto" axis.x.show="true" maxsplitcharts="10" showname="false" maxdisplayitems="10" zoomable="false" charttype="PieChart3D" aggregation.absolute="false" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="true" showlegend="false" lockyaxis="true" showlabels="true">
+        <legendcomposition measure="true">
+          <pielabelcomposition measure="true" value="true" />
+        </legendcomposition>
+        <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+      </chart>
+      <ccontent enabled="both" ratio="0.347" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@54f1083e" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(0,0,0,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="942ed7cb-5978-46ed-9ebc-f2beaf528e7d">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="5" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="1" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" templatetext="{0}" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" source="server://tag009441091191" sessionid="MyApp" folderid="org.eclipse.ui.internal.ViewStack@3e30395a" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" addfilterinfo="false" shownasinteger="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,128,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.measure.MeasureText" id="9744ff0c-274b-4ab3-83ce-94fbd078ff14" unitshown="true" usespecificautorefresh="false" sessiontype="live" heightmode="AdjustToFontSize" locationascomparesource="false" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" locationassource="false" name="" onlylastvalue="false">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="13" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="12" />
+      <chartsource systemid="MyApp" sourcecolor="RGB(64,64,64,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="MyApp" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="7ce94dcb-48c1-4c31-9a96-45d2bb7304e7" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Mobile Search" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+        <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Mobile Search" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Mobile Search" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+        <displaysourceinfo />
+      </chartsource>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" templatetext="{0}" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" source="server://tag009441091191" sessionid="MyApp" folderid="org.eclipse.ui.internal.ViewStack@46fe3a1d" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" addfilterinfo="false" shownasinteger="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(255,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.measure.MeasureText" id="98a8c67f-5df6-43ca-abbd-8017ed0c547f" unitshown="false" usespecificautorefresh="false" sessiontype="live" heightmode="AdjustToFontSize" locationascomparesource="false" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" locationassource="false" name="" onlylastvalue="false">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="13" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="12" />
+      <chartsource systemid="MyApp" sourcecolor="RGB(205,25,25,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="MyApp" colorinheritancemode="random" aggregationtype="Sum" rate="10s" sourcetype="MEASURE" id="db2451f8-89d0-49ae-bcf5-88d581cda693" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ErrorDetectionMeasure" fetchbaseline="false" unit="number" name="Failed User Action Count of Mobile Login" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="number">
+        <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Failed Page Action Count of Mobile Login" agentname="" metricsimpledisplayname="Failed User Action Count" agenthost="" metrickeyid="Failed Page Action Count" keyid="Failed Page Action Count of Mobile Login" metricgroupkey="Error Detection" collector="" measuretype="ErrorDetectionMeasure" />
+        <displaysourceinfo />
+      </chartsource>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@6d0894c2" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="stretchBoth" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="a7e620cb-cda9-4a71-ba4a-c378c3c178ed">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="14" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="20" />
+      <image offset="-1" length="5752">
+        <chunk offset="0" data="iVBORw0KGgoAAAANSUhEUgAAAG0AAAF1CAIAAABtaPNDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABBtSURBVHhe7Z17cBT1HcB3b+8IISE8EiKgiKBgRVFEAQkEgryEYkEQQ6hO1fqc6nS0tup0Ooz9p1pbi53Wse3UR4skITyi4SFBSSAJJIQQQEGgElBREEwCJDzC7t72t7kfSe7Y293b/d7t7e++n2GOXW6Z3f3c7/397f54RVE4xDYe+jdiD/QIA3qEAT3CgB5hQI8woEcY0CMM6BEG9AgDeoQBPcKAHmFAjzCgRxjQIwzoEQb0CAN6hAE9woAeYUCPMKBHGNAjDOgRBvQIA3qEAT3CgB5hQI8woEcY0CMM6BEG9AgDeoQBPcKAHmFAjzCgRxjQIwzoEQb0CAN6hAE9woAeYUCPMKBHGNAjDOgRBvQIA3qEAT3CgB5hQI8woEcY0CMM6BEG9AgDeoQBPcKAHmFAjzCgRxjQIwyeQy1Kq0R3EMt4evv4+RVym5/uI9bwZHbnPj+jPLRdFlGlDdTy8Y6+fNFE76M1Mr4p1zLtHvvw5HNZlveVzzBNWoSmx8DOK7cKr+1HlVZQPWb344V8MbD/8h7/8q8wf0eM6rF3N+7GNJoklcW+h6vlT79HlZGheiTc0Sfwt4q4yHdfhVzbiCojgHqc2I+mxwAtC30/3iIfOIsqzUI9Tgj2SDi1wDezTD5+ge4i+lCPN6Xx/VfTqqaDr+f57imXmy/RXUQH6tHDc+MyQpMkYe9s771b5fMy3UXCQT0S7krX8Eiomu5dWClLWFTq0sWjVnoMsD7H++QOP5rUoXP9mVaJ6+kLq5Lw63r5j6M6vSNd6fSS6uUGrAmtarry+u3CEuyAhyEofYW0Iq/k97cK/zmC+VuDII8TwheRHfy8Rl7xNaoMJchjx8CPDlKe76HtcvUPqDKIII9j0vleRXpFZIBLi3xztsr7zqDKToI8Jnm4cWFakSE0tvcaD7WgSkqQR4Jmr0aTb+9TVX5/ke4mOKEew/VqNDk61ze7XMawLSF0HcjGNi6jewQqCTM2SyWThW6hv0hiEXr36UkGrfErKb3bS2rwBA82aqQiM62fEFZM9D6zM6G7Oloe28OwkfL22ISONWp4NOwdhuOlm4W3/pegKjU8ZvXjvZfDsJHybJ1/zbFELCk1PPYQuOGXw7CR4s/zLd4mlyVe2FbDI6FrGDZSLub65lXIO5sSS6W2R8tFZICz7WHbhtYEUqnt8cowbKScnO+bUeZPnLCttscRvfg0EwM/+hz+iXdWuXw6McK22h5JahzZ226SJOxpD9smwmRfbY8Em0VkB5XTvaQGZ77XGNajmRiDSVZne5+qZTxsGzre04GFgR99Xtwtv3pb2J/N7YS9sfQkbuhHkCOLr40S3jzIbEmpl0AmZNANKJ6v9y87ymb+1vNoYQBNH9JrfLRGXvstgypj6pEgLvLlVsk1zE321fM4Np1PWWG3NX4l53N9c7bI+9kK2+p57ObhRlka0zXkhwW+meXyV+foLgPoeSRYGxs3w7F5qsomVnqNRh6jUER2cHCOl2Twc0yEbQ08TsqkG1Fi+wzv/ZXyJfc3Kw08XpfCRxqGjZSPp3h/Vu36/reBR0JUs3aAggneF+rdnSZNeIxaVdOVN0a7O2xr7BFqAM2Ql24W3mtwq0pjjxNshGEj5fEd/mJ3hm2NPSbbCMNGipTny9sml590n0pjj4SYZW3CxVzf3K1yndvCtqY8Ao6Nm+HsQt/sLfIRV4VtTXm8oy/diBlq2Lbcf8I9k31NeRzRy9T8e1i+vNdNYVtTHkmuHhPJfGcods/yznXJO5pMeSTEuIjsYOs074NuCNua9RiD3mE4VmZ7n47/sK1ijsY2h29kyV6ZXkpcwv35C/lwi5/u6QIbhrXAXw/Gr0p6icNLpF/WyZ+c8F+Q6BdX8tA2hz168sVlR0z95LGHXmIHSQXi5E+k3+2VS4/7W0V6UIClB5x/TYWvQNx0PB5V6tUe5KJH9+EnZfLZ/XjSNWxoVe5MN1svRY+eReKnUwRH2mEAkDx1y7p4iaRkrBL3n4mvVOnOX5XjBhWL1TO8A5PpruM4n0+t8U2cvaPJrR4Jn81mJ2zrPLPKpLY4aFbSq3E1eVWS45UOvRS388Iuh9MkvQ4GeHWfkypdXM+E8PIe//v4jiYQvPnih8ecKSrpFTBDcqFY/r0DKunpWaJXkfjZ6VirpOdmjKvXiA3mBlWhoCdmj2El0okL9CZjAD0rk9y+QWoJHkKNHvSUrDJ9s3QxJs1Kej6GWVgpxaDbSE/GNk/uiHqapGdinmj3GvldTf6aRqW2kdvZpOw7o8h5Pnpm5vjbIfkXw6LVDw56/vq8zH1+WqlrUuqbuV3NCtluW8SOVjVsO17IGxyVUErY59gJop8jKbS+mWrd3ayce8DdWrsViBtyhLuvioLK9txtCtmvHDzr/+Co/+laF6+30LNIrG2Er78j8NjBBZcvttBvlfgFdNjWikdCn5WxnlYKy7XF4nfn6b2AYLH+GtHLrYHvAOBL61j0eLPLPRJgl9axmh7T6IarqZrufaASZrJv4qbHAOtyvE+ALK1Dy8kIIYU0/f9M8Jt6u71Gix4Jbq+yQ1h6wJZK6/3NoamMZO0Az+3y21lax7pHNqqaDpTFvsd2yCVW39Fk3SMzVU0HgXc0WVtax0Z6ZM4j4UKuxaV1+KxSaWiqWthdlxL45Af1UJeFNKShVbm+p/WfIZ65plismCYQFXTfBBqHJhWIg1L4Ie1ayeeQ9k+ynZ5EDwhAfrL+a6ST89kc9x1eIm2bLoTcsg4RKE8rEgen8Nenqi+jIUl4SAr/271+0ruiXzPHXaXSpilCKrP3F0NmbDY72Zf+ByQcuebCtvRoRIenTIRt6aGIPoZhW3ocYsjfD+mppAchhnjyxdXfhC0p6UGIGboXiptPaKukRyAmIY3onVphW/o1Yp7M1eKVb1Cg3yERcUOJdDx4si/9AomU29ZLzW1UIoH+K2KB7E2dk33pPyHWmF9Be410H7HMYzUyMUl3EDu8uFtmc0AbcR+YrwHAegYAbPcAgO1wALBfCACOUwCA42YA4DguAJ58cQ3GFezzFsa57INxVwCeqzOQSKCHIuFYZO4ldPRoRJOZpl+KaHbeXlKBeG2KOtf0+sszToekck/u8O+axey8tvHt8/ZSzN1fqEd+uTggOXQGKdm4Ojl0kq5f4fqtlpruZ3Me6Y1r1XmkfbvRXUP4+7ZKJImRxBWYHTo4hU8W6Hf67Duj3NKb2XnNldO8g1Porilo/o6cFV+5fxVMLTJWifsifz2a9QTV4Kp1n0zSo1BcN1mw8CiGdY8WHo6Ic3wFYuEEYaylN+Vb97j/LN1gA9J9fmecMOdqKxIJFj2SpPhlC1Pp8S+jPQ9eZ1GiCi0nI+RwC1OVjP1Fgix6/OgYOx4DgVObWMzX+1mpZBZUSG+PMfMYoAEWPTacoxuuJnuT9EGWINi3aNkjA42eURukjyYJSdYbLEEkaL6+oUTakCP0Nt19NoaWk5HQKrpbombg1CZ679sL4YzI7T2t7GxStp1SVma7dbgsrUjcfLcAvqylnsfGNq6+WdlF/jSRT7XhrSx29yhZ90L1vYU5mcASCUEeT1zk9jQrtep7NFV3R+cyNbbozReLJgrzroGXSOA3n/BXq+91VTPsN/PYHJQN8M5h+ZGhQNVzwhLt9wzT07DN89FfLYmeiWFMBk5tQk/GKvfEajU5ej4mGV8qhSz1Gz3oKdnjxrVSY5d5x9GGnpUxBhWLR1vpHcYGemKWsBY4tQk9NzOkrhBrfoi1RAI9PRs4uFo7vQIG8OSL/z3ijEQCvQgGePNgTBqKYaAX4XbsB05tQq/D1TwOETi1Cb0U97Lg8hOnzkKvxqV0feLUWVw8rgkbOLWJWz3CB07tYdZjj0JxyqcSaejSfUfJXC2W5nj6d6e78YBe0KdXkZiVwU/KVP+M6csfaomLCeHkqjZPFUb3iUq4Coy+K8V5W6U3Dsg7G/0h9eD7Dc7PMeteKJY5sUy4IerFkR7V2I0SacoSdzotsSd2OLxMnDdfLA7/xKmzcP8+LJ+8SHf0GbFOojfkEO8ejo82jhZm5/eclxSSHOgNOUG0A6c2Meux4qSThWMMAqc2MVv/Vp1yrOuzqEr60+3x3s41e32VllZlsc89ZdL7d4HMmI0uZj3WNTngcXyptHKi0C3e06KKqfmPR88pQ1JjfTc/WitVRfLEqbOYsrP1JN2IGYOKxY1TXCORYMpjjDN1xipV4rU96K4rMOexOXYeexapT5zelBb/VUsQxh7b/Fx9rNKjr0BcPdHiE6fOYuyxtlE5nxuLebqkm//uOGFaf/dJJBh7jFnhuHS056d2njh1FGOPVTFpgS/ZKz873FRhHZ8YX3pl9HuEj9fIS0a6WCLBoB1+qo3L7B7dvHZ/hVQwAeZhSQcxSAXWFjs1z6RPpGVAT5w6i4HHqBaOozZIH2bHS+DUJgY3Eb3CcVicBU5toufRr6gPZtIdUAauETfGWeDUJnr1DGk53pkOn+t6FYmV04Vb2Fr2WU9TNDJ1cqH44STWJBL0PIL3ZLz5Yn6WMDkKj+06jq7HZroBAr9c/NdYz9zoPLbrOGE9Nl/iDp6FTI9/uM3zMLuP7Ya9MVI4ynlgwzy/2iW/OIJZiYSw9wZYOOZVSa/HfeDUJmFvD6onM6tMes8NgVObaHskCmsbATxmlUpFLgmc2kS7HQ7y7tuR66XyqW6K+dlBW1ZdE92wzKBi8eOcRJFI0PZos3AMBE4HJtPdREDbo50eYc8icb0LA6c20fB4QeYOWW2B+wrENdnCGBcGTm2i4bHqlCJZaoF78kXSxJl6VcJJJGh4tJypl472LB6ciBIJGh6tzUJxe+DUJloeI+8RPrHD9YFTm4S2wxvbuIwIA61sBE5tEpqIaiLsDk7bzEjg1Ca2PI5YJ5FWDhuBU5uEOjAf+B9WIm3MEVKZXQ4pMoI8tvnNpsdA4PQaV02ZjSpB9QxpOWZnGufSlBVi9QwGY352CLJmpsWTXCiumogSQwnyaDjMQ3p++VnCzAEoMZQgj/o9Qn65SHp+rAZObdJZPraIXFo3PUev7mM85meHTi87dQvHF1gPnNqkU8328IXjI9XyH1kPnNqk0051mJbjrDLpn2MBVrphG+rRr2i3wAOBUy9aNILWM5pTHUeul7ZMFfokTMzPDtTdlS2ea9sDpyjRJNRjSE+m3yrx4wQLnNrksscuUx1d+sSps6gem7pMdfTmJ2jg1Caqx6rLUx1J9/kfYz2JGTi1ieqxo3B8c7TnUVzpxhLt6bG9J/NcnfxMAgdObaK2H3uvlHIHe0CW50xYPN9d4GYM4N+6EyXagm9o8Q/swWPMzyah8wAQa2A6hAE9woAeYUCPMKBHGNAjDOgRBvQIA3qEAT3CgB5hQI8woEcY0CMM6BEG9AgDeoQBPcKAHmFAjzCgRxjQIwzoEQb0CAN6hAE9woAeYUCPMKBHGNAjDOgRBvQIA3qEAT3CgB5hQI8woEcY0CMM6BEG9AgDeoQBPcKAHmFAjzCgRxjQIwzoEQb0CAN6hAE9woAeYUCPMKBHGNAjDOgRBvQIA3qEAT3CgB5hQI8woEcY0CMM6BEG9AgDeoQBPcKAHmFAjzCgRwg47v/8a+7xClA+JwAAAABJRU5ErkJggg==" />
+      </image>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="[Search|dashboard:online://tag009441091191/Mobile Search Step Dashboard]" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@512150d3" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="stretchHeightWithAspectRatio" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="aad04eea-31a3-4acb-b645-0970f2dcecf6">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="12" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Franklin Gothic Medium" style="NORMAL" height="1" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" templatetext="{0}" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" source="server://tag009441091191" sessionid="MyApp" folderid="org.eclipse.ui.internal.ViewStack@c0ccda4" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" addfilterinfo="false" shownasinteger="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.measure.MeasureText" id="b0e825d5-b3e0-40e6-baae-751409328e8f" unitshown="false" usespecificautorefresh="false" sessiontype="live" heightmode="AdjustToFontSize" locationascomparesource="false" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" locationassource="false" name="" onlylastvalue="false">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="13" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="agents" />
+          <inheritanceentry inherited="false" type="applications" />
+          <inheritanceentry inherited="false" type="hosts" />
+          <inheritanceentry inherited="false" type="visits" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="12" />
+      <chartsource systemid="MyApp" sourcecolor="RGB(64,64,64,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="MyApp" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="dd88307f-e2f9-47c8-b560-901d20c05187" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Mobile Search" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+        <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Mobile Search" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Mobile Search" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+        <displaysourceinfo />
+      </chartsource>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" templatetext="{0}" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" source="server://tag009441091191" sessionid="MyApp" folderid="org.eclipse.ui.internal.ViewStack@4ade04bf" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" addfilterinfo="false" shownasinteger="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(255,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.measure.MeasureText" id="baee0d04-401c-4881-988d-6831a4168605" unitshown="false" usespecificautorefresh="false" sessiontype="live" heightmode="AdjustToFontSize" locationascomparesource="false" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" locationassource="false" name="" onlylastvalue="false">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="13" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="12" />
+      <chartsource systemid="MyApp" sourcecolor="RGB(205,25,25,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="MyApp" colorinheritancemode="random" aggregationtype="Sum" rate="10s" sourcetype="MEASURE" id="3d058217-afb4-401d-bd08-4bea1feacfec" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ErrorDetectionMeasure" fetchbaseline="false" unit="number" name="Failed User Action Count of Mobile Search" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="number">
+        <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Failed Page Action Count of Mobile Search" agentname="" metricsimpledisplayname="Failed User Action Count" agenthost="" metrickeyid="Failed Page Action Count" keyid="Failed Page Action Count of Mobile Search" metricgroupkey="Error Detection" collector="" measuretype="ErrorDetectionMeasure" />
+        <displaysourceinfo />
+      </chartsource>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" showlatency="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" source="server://tag009441091191" sessionid="MyApp" folderid="org.eclipse.ui.internal.ViewStack@48c82c02" addfilterinfo="false" autozoom="true" yscrollpos="0" ismaster="false" typeid="com.dynatrace.diagnostics.adm.ADM" viewmode="Topology" id="d53ea4a4-1a11-40c2-aad0-a38aa1d31503" displaymode="Base" zoomlevel="0.4" usespecificautorefresh="false" showentrypoints="true" sessiontype="live" locationascomparesource="false" usedashboardsource="true" locationassource="false" showlegend="true" name="Transaction Flow" xscrollpos="0" showdatabase="true">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="38" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="INACTIVE" type="analysiscache" />
+        <criterion type="and" />
+        <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+        <criterion mode="all" type="applications" />
+        <criterion type="btm">
+          <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Mobile Search" />
+          <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Mobile Book" />
+          <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Mobile Login" />
+        </criterion>
+        <criterion type="casuemdimension" />
+        <criterion type="dbdetails" />
+        <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+        <criterion analyzeserverpath="true" analyzeclienterrors="false" isactive="true" analyzeenduserpath="true" type="enduserpath" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="or" />
+        <criterion mode="all" enduser="false" type="purepaths" />
+        <criterion type="threads" enabled="false" filterbyid="false" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <criterion type="webpage">
+          <textpattern name="timerName" type="contains" enabled="true" />
+          <textpattern name="pageContext" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="webrequest">
+          <filteruripattern>
+            <stringmatchpattern match="contains" text="" />
+          </filteruripattern>
+          <filterquerypattern>
+            <stringmatchpattern match="contains" text="" />
+          </filterquerypattern>
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <datamodelconfig>
+        <table sortcolumn="0" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31">
+          <column forcevisible="false" hidden="false" width="100" index="0" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="4" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="6" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="7" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="8" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="9" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="10" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="11" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="13" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="14" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="15" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="16" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="19" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="20" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="21" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="22" sort="None" />
+          <column forcevisible="false" hidden="true" width="40" index="23" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="24" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="25" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="26" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="27" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="28" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="29" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="30" sort="None" />
+          <column forcevisible="false" hidden="false" width="40" index="31" sort="None" />
+        </table>
+      </datamodelconfig>
+      <analyzerparameters fixmissingpools="true" analyzerrecordlimit="-1" requiredrilldowndata="true" fixinsignificantpools="true" analyzeentrypoints="true">
+        <keysmap>
+          <keys agentpropertykey="mainframe.subsystem" extensionspecifickey="com.compuware.strobe.ui.systemId" />
+          <keys agentpropertykey="mainframe.jobname" extensionspecifickey="com.compuware.strobe.ui.jobName" />
+        </keysmap>
+      </analyzerparameters>
+      <expandstates>
+        <expandgroup expandstate="Expanded" agentgroupid="Business Backend Server (Java)|type:1" />
+        <expandgroup expandstate="Expanded" agentgroupid="CreditCardAuthorization (C++)|type:4" />
+        <expandgroup expandstate="Expanded" agentgroupid="Customer Web Frontend (Java)|type:1" />
+        <expandgroup expandstate="Expanded" agentgroupid="Database|type:0" />
+        <expandgroup expandstate="Expanded" agentgroupid="Derby Client|type:0" />
+        <expandgroup expandstate="Expanded" agentgroupid="Desktop Browser|type:8" />
+        <expandgroup expandstate="Expanded" agentgroupid="Domainless|type:0" />
+        <expandgroup expandstate="Expanded" agentgroupid="First Party Content|type:0" />
+        <expandgroup expandstate="Expanded" agentgroupid="Mobile App|type:8" />
+        <expandgroup expandstate="Expanded" agentgroupid="Mobile Browser|type:8" />
+        <expandgroup expandstate="Expanded" agentgroupid="Robot|type:8" />
+        <expandgroup expandstate="Expanded" agentgroupid="Synthetic|type:8" />
+        <expandgroup expandstate="Collapsed" agentgroupid="Third Party Content|type:0" />
+        <expandgroup expandstate="Expanded" agentgroupid="Web Server|type:16" />
+      </expandstates>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@1d0534c" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="stretchHeightWithAspectRatio" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,128,255,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="d7322756-c4c4-4c40-bc9d-3294a6199d1b">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="12" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Franklin Gothic Heavy" style="BOLD" height="17" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" locationascomparesource="false" source="server://tag009441091191" sessionid="MyApp" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@b6eb9ae" locationassource="false" addfilterinfo="false" name="Incident Chart" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Incident" id="d9fb533b-f7ff-41c9-9343-2a62e8b20888">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="41" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <table structuremode="hierarchicalincident" sortcolumn="2" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7">
+          <column forcevisible="false" hidden="false" width="148" index="0" sort="None" />
+          <column forcevisible="false" hidden="false" width="20" index="1" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="2" sort="Up" />
+          <column forcevisible="false" hidden="false" width="120" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="60" index="4" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="7" sort="None" />
+        </table>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" maxsplitcharts="10" showname="true" maxdisplayitems="10" zoomable="true" charttype="IncidentTrafficLight" aggregation.absolute="false" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="true" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" measure="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="MyApp" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="MyApp" autoscale="false" name="Mobile Travel" overridesource="false" sourcetype="INCIDENT_RULE" id="f926520c-fba6-40a9-82aa-a5f1103a09ef" position="1" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Dashboard" timeframe="10" visible="true" flags="1" description="" id="Mobile Travel">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="immediate" />
+              <actions>
+                <actionref severity="severe" execution="begin" smartalert="false" type="Logging Notification" bundleversion="0.0.0" refaction="com.dynatrace.diagnostics.logging" rolekey="com.dynatrace.diagnostics.logging" roletype="1" smartexecution="begin" key="com.dynatrace.diagnostics.logging" />
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+      </datamodelconfig>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@5b82250" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(0,0,0,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="dd8cce92-3f48-4e31-9f88-04c0cd6ec910">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="5" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="1" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="         Response Time" folderid="org.eclipse.ui.internal.ViewStack@1d982f77" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="stretchHeightWithAspectRatio" name="RESPONSE TIME" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="de6f6d26-5360-4f7b-be92-bab32b577cf3">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="12" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="12" />
+      <image offset="-1" length="28992">
+        <chunk offset="0" data="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" />
+      </image>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="         Count" folderid="org.eclipse.ui.internal.ViewStack@43f3c191" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="stretchHeightWithAspectRatio" name="COUNT" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="df4af852-4cbc-4a19-a992-ab34e48b4900">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="12" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="12" />
+      <image offset="-1" length="22112">
+        <chunk offset="0" data="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" />
+      </image>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="         Failures" folderid="org.eclipse.ui.internal.ViewStack@28d5785" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="stretchHeightWithAspectRatio" name="FAILURES" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="18c2552f-e13b-41b3-9789-6cc6036fbce7">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="12" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="12" />
+      <image offset="-1" length="15824">
+        <chunk offset="0" data="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" />
+      </image>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="[Book Now|dashboard:online://tag009441091191/Mobile Book Now Step Dashboard]" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@25b52d72" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="stretchHeightWithAspectRatio" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="1b6719e9-124a-4845-b921-3875d57f6183">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="12" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Franklin Gothic Medium" style="NORMAL" height="1" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" templatetext="{0}" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" source="server://tag009441091191" sessionid="MyApp" folderid="org.eclipse.ui.internal.ViewStack@72a6984c" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" addfilterinfo="false" shownasinteger="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,128,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.measure.MeasureText" id="39e1e1d7-2b8b-479e-a1bb-68e30cf71d0c" unitshown="true" usespecificautorefresh="false" sessiontype="live" heightmode="AdjustToFontSize" locationascomparesource="false" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" locationassource="false" name="" onlylastvalue="false">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="13" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="12" />
+      <chartsource systemid="MyApp" sourcecolor="RGB(64,64,64,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="MyApp" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="89442cce-148a-4e06-a4a7-b95c55084240" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Mobile Login" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+        <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Mobile Login" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Mobile Login" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+        <displaysourceinfo />
+      </chartsource>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" templatetext="{0}" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" source="server://tag009441091191" sessionid="MyApp" folderid="org.eclipse.ui.internal.ViewStack@5a75bdf1" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" addfilterinfo="false" shownasinteger="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(255,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.measure.MeasureText" id="4d083eb6-debe-4887-9317-c7a1d026f419" unitshown="false" usespecificautorefresh="false" sessiontype="live" heightmode="AdjustToFontSize" locationascomparesource="false" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" locationassource="false" name="" onlylastvalue="false">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="36" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="12" />
+      <chartsource systemid="MyApp" sourcecolor="RGB(205,25,25,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="MyApp" colorinheritancemode="random" aggregationtype="Sum" rate="10s" sourcetype="MEASURE" id="d147bc51-14d6-4d5b-8edc-b93ed17a8874" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ErrorDetectionMeasure" fetchbaseline="false" unit="number" name="Failed User Action Count of Mobile Book" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="number">
+        <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Failed Page Action Count of Mobile Book" agentname="" metricsimpledisplayname="Failed User Action Count" agenthost="" metrickeyid="Failed Page Action Count" keyid="Failed Page Action Count of Mobile Book" metricgroupkey="Error Detection" collector="" measuretype="ErrorDetectionMeasure" />
+        <displaysourceinfo />
+      </chartsource>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" templatetext="{0}" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" source="server://tag009441091191" sessionid="MyApp" folderid="org.eclipse.ui.internal.ViewStack@261356a0" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" addfilterinfo="false" shownasinteger="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.measure.MeasureText" id="58674459-9315-4030-88db-43f9d218b152" unitshown="false" usespecificautorefresh="false" sessiontype="live" heightmode="AdjustToFontSize" locationascomparesource="false" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" locationassource="false" name="" onlylastvalue="false">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="34" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="12" />
+      <chartsource systemid="MyApp" sourcecolor="RGB(64,64,64,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="MyApp" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="f2b1dc0c-c5cb-4c7f-94fe-1cdf5fd03bcd" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Mobile Book" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+        <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Mobile Book" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Mobile Book" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+        <displaysourceinfo />
+      </chartsource>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" locationascomparesource="false" source="server://tag009441091191" sessionid="MyApp" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@401c0f27" locationassource="false" addfilterinfo="false" name="Steps" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.transaction.Transaction" id="5d728121-8bec-4b1d-9263-8e527500d2a6" displaymode="Base">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="37" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="INACTIVE" type="analysiscache" />
+        <criterion type="and" />
+        <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+        <criterion mode="all" type="applications" />
+        <criterion type="btm">
+          <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Mobile Search" />
+          <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Mobile Book" />
+          <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Mobile Login" />
+        </criterion>
+        <criterion type="casuemdimension" />
+        <criterion type="dbdetails" />
+        <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="or" />
+        <criterion mode="all" enduser="false" type="purepaths" />
+        <criterion type="threads" enabled="false" filterbyid="false" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion customdefaultcolumnindex="0" columnlabel="" columnindex="0" isactive="false" sort="highestValues" type="topx" maxnrofrecords="10" customdefaultcolumnlabel="" />
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <criterion type="webpage">
+          <textpattern name="timerName" type="contains" enabled="true" />
+          <textpattern name="pageContext" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="webrequest">
+          <filteruripattern>
+            <stringmatchpattern match="contains" text="" />
+          </filteruripattern>
+          <filterquerypattern>
+            <stringmatchpattern match="contains" text="" />
+          </filterquerypattern>
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="192,807" />
+      <datamodelconfig>
+        <table sortcolumn="7" drawcolumn="-1" columnorder="18,0,1,2,3,19,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <dyncolumns />
+          <column forcevisible="false" hidden="false" width="104" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="160" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="124" index="2" sort="None" />
+          <column forcevisible="false" hidden="true" width="124" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="44" index="4" sort="Down" />
+          <column forcevisible="true" hidden="false" width="64" index="5" sort="None" />
+          <column forcevisible="true" hidden="false" width="68" index="6" sort="Down" />
+          <column forcevisible="false" hidden="false" width="64" index="7" sort="Down" />
+          <column forcevisible="false" hidden="true" width="92" index="8" sort="Down" />
+          <column forcevisible="false" hidden="true" width="129" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="129" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="129" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="129" index="12" sort="None" />
+          <column forcevisible="false" hidden="true" width="160" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="15" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="16" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="17" sort="None" />
+          <column forcevisible="false" hidden="false" width="20" index="18" sort="None" />
+          <column forcevisible="false" hidden="false" width="60" index="19" sort="None" />
+        </table>
+      </datamodelconfig>
+      <analyzerparameters reanalyze="true" analyzerrecordlimit="10000" requiredrilldowndata="true" />
+      <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="true" logxaxis="false" title="Avg" resolution="Auto" axis.x.show="true" maxsplitcharts="10" showname="true" maxdisplayitems="10" zoomable="false" charttype="PieChart3D" aggregation.absolute="false" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="true" showlegend="false" lockyaxis="true" showlabels="true">
+        <legendcomposition measure="true">
+          <pielabelcomposition measure="true" />
+        </legendcomposition>
+        <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+      </chart>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" templatetext="{0}" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" source="server://tag009441091191" sessionid="MyApp" folderid="org.eclipse.ui.internal.ViewStack@6fe3e951" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" addfilterinfo="false" shownasinteger="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.measure.MeasureText" id="612f75ea-7afc-4de7-ade5-eecc191efc43" unitshown="false" usespecificautorefresh="false" sessiontype="live" heightmode="AdjustToFontSize" locationascomparesource="false" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" locationassource="false" name="" onlylastvalue="false">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="13" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="12" />
+      <chartsource systemid="MyApp" sourcecolor="RGB(64,64,64,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="MyApp" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="2cd751a3-bfc9-49a3-9ef3-56b0c1ccb82f" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Mobile Login" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+        <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Mobile Login" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Mobile Login" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+        <displaysourceinfo />
+      </chartsource>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" templatetext="{0}" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" source="server://tag009441091191" sessionid="MyApp" folderid="org.eclipse.ui.internal.ViewStack@78df0b11" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" addfilterinfo="false" shownasinteger="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,128,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.measure.MeasureText" id="6ecc24ea-c957-494f-ab38-83a087987074" unitshown="true" usespecificautorefresh="false" sessiontype="live" heightmode="AdjustToFontSize" locationascomparesource="false" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" locationassource="false" name="" onlylastvalue="false">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="35" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="12" />
+      <chartsource systemid="MyApp" sourcecolor="RGB(64,64,64,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="MyApp" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="be041d3b-d39b-452f-81ca-c029422e3811" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Mobile Book" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+        <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Mobile Book" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Mobile Book" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+        <displaysourceinfo />
+      </chartsource>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@790becb8" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="stretchBoth" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="710b26a5-5802-470e-b2bc-26a2753311c0">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="14" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="20" />
+      <image offset="-1" length="3316">
+        <chunk offset="0" data="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" />
+      </image>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="Mobile Travel WorkFlow Portal" folderid="org.eclipse.ui.internal.ViewStack@2a824bac" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="73cf732d-5414-4b73-847c-1675eb4bac95">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="4" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="20" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="[Login|dashboard:online://tag009441091191/Mobile Login Step Dashboard]" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@48c34e11" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="stretchHeightWithAspectRatio" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="75a18e43-71a9-4d31-85f5-dd6c8ebb2885">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="12" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Franklin Gothic Medium" style="NORMAL" height="1" />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>

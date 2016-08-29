@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <extension point="com.dynatrace.diagnostics.InstallerContent">
+      <metainfo installer_type="resourcepack" name="Prod">
+     <resource resource="dashboards/Admin Booking Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Admin Journey Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Admin Load Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Admin Login Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Admin Logout Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Admin Report Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Admin Reporting WorkFlow.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Book Now Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Book Travel WorkFlow.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Database Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Finish Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Home Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Login Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Mobile Book Now Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Mobile Login Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Mobile Search Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Mobile Travel WorkFlow.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Payment Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Revenue Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/Search Step Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/WorkFlow Comparison Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/WorkFlow Funnel Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/WorkFlow Layer Breakdown Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/WorkFlow Server Timeline Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/WorkFlow Summary Dashboard.dashboard.xml" resource_type="dashboard"/>
+     <resource resource="dashboards/WorkFlow Trends Dashboard.dashboard.xml" resource_type="dashboard"/>
+	 <resource resource="profiles/WorkFlow.profile.xml" resource_type="systemProfile" />
+      </metainfo>
+   </extension>
+</plugin>

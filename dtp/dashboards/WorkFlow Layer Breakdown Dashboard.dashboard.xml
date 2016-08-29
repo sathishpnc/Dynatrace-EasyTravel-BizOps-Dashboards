@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from Dynatrace Support -->
+<dynatrace version="6.1.0.7880" date="8/23/16 10:38 AM">
+  <dashboardconfig memento.version="6.1.0.7880" suppresssavewarning="false" created="2016-08-12T23:18:24-0400" sessiontype="live" icon="com.dynatrace.diagnostics.portlets/icons/stacked_bar_16x16.png" description="" modifiedbyname="admin" locationascomparesource="false" source="server://tag009441091191" sessionid="MyApp" opendrilldowninnewdashboard="true" groupname="" autoreplacesession="false" revision="00000156-b7d6-5ad0-94aa-17dca4aeb4a2" locationassource="false" localizationenabled="false" name="WorkFlow Layer Breakdown Dashboard" authorname="admin" modified="2016-08-23T10:38:13-0400" id="b1ba61fb-c9af-47cd-b136-d723a1570d61">
+    <reportconfig print.images="true" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" orientation="portrait" description="" title="" type="PDF" enabled="true" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" lines.per.table="100" pagesize="A4" override="false" optimizeequalcolumns="true" print.legends="true" levels.per.tree="10" />
+    <filter>
+      <criterion type="admfilteranalyzer" />
+      <criterion mode="all" type="agents" completepurepath="true">
+        <textpattern name="agentname" type="contains" enabled="true" />
+        <textpattern name="agenthost" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="and" />
+      <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+      <criterion mode="all" type="applications" />
+      <criterion type="btm">
+        <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Finish" />
+        <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Search" />
+        <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Home" />
+        <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Payment" />
+        <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Book Now" />
+        <record legacymode="false" context="EndUser" configuredforfullsplit="false" transaction="Login" />
+      </criterion>
+      <criterion type="casuemdimension" />
+      <criterion type="dbdetails" />
+      <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+      <criterion analyzeserverpath="true" analyzeclienterrors="false" isactive="true" analyzeenduserpath="true" type="enduserpath" />
+      <criterion mode="all" type="hosts" completepurepath="true" />
+      <criterion severitiesmode="all" statesmode="all" type="incident" rulesmode="all" severities="" states="" />
+      <criterion type="or" />
+      <criterion mode="all" enduser="false" type="purepaths" />
+      <criterion includemeasurename="true" includeplatform="true" includetestname="true" teststatus="FAILED,INVALIDATED,VOLATILE,DEGRADED,IMPROVED,MISSING,passed" type="tests" testcategory="UNIT,BROWSER_TIMER,BROWSER_AUTO_TIMER,PERFORMANCE,LOAD,WEB_API,EXTERNAL" />
+      <criterion includeplatform="true" type="testsoverview" />
+      <criterion type="threads" enabled="false" filterbyid="false" />
+      <criterion type="timeframe">
+        <timeframe start="0" end="9223372036854775807" type="Auto" />
+      </criterion>
+      <criterion useendtimefortimeframefilter="false" type="visits">
+        <visitidset />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern name="timerName" type="contains" enabled="true" />
+        <textpattern name="pageContext" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern match="contains" text="" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern match="contains" text="" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+    <designconfig autoscroll="false" namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" clienttheme="DEFAULT" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" autoadjustfontsizes="false" />
+    <dashboardlayout>
+      <portletfolder selectionindex="0" relationtype="LEFT" portletconfigorder="f8c17ee0-6fc6-46c3-9d72-0f914415fe99" folderid="0ad0e000-e9c9-4d3d-a2b4-d673dad78301" relatedfolderid="DashboardLayout.blankArea" ratio="0.95">
+        <designconfig namefontsize="24" descriptionshow="true" headertype="HEADLESS" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" namefontfamily="Franklin Gothic Heavy" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="2cfe986b-8dbd-4d8d-a5bd-d3554849cf44" folderid="org.eclipse.ui.internal.ViewStack@5b6db79a" relatedfolderid="0ad0e000-e9c9-4d3d-a2b4-d673dad78301" ratio="0.5">
+        <designconfig namefontsize="24" descriptionshow="true" headertype="DEFAULT" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" namefontfamily="Franklin Gothic Heavy" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="3be8b670-2359-42bb-a4cb-a78c3cf8dd01" folderid="org.eclipse.ui.internal.ViewStack@1e1765e" relatedfolderid="0ad0e000-e9c9-4d3d-a2b4-d673dad78301" ratio="0.5">
+        <designconfig namefontsize="24" descriptionshow="true" headertype="HEADLESS" namefontcolor="0,128,255" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" namefontfamily="Franklin Gothic Heavy" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="WorkFlow Layer Breakdown" folderid="0ad0e000-e9c9-4d3d-a2b4-d673dad78301" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="f8c17ee0-6fc6-46c3-9d72-0f914415fe99">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="4" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="20" />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" locationascomparesource="false" source="server://tag009441091191" sessionid="MyApp" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@5b6db79a" locationassource="false" addfilterinfo="false" name="WorkFlow Layer Breakdown" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.LayerBreakdown" id="2cfe986b-8dbd-4d8d-a5bd-d3554849cf44">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+        <criterion mode="all" type="applications" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe start="0" end="9223372036854775807" type="Auto" />
+        </criterion>
+        <criterion customdefaultcolumnindex="0" columnlabel="" columnindex="0" isactive="false" sort="highestValues" type="topx" maxnrofrecords="10" customdefaultcolumnlabel="" />
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="1,1" />
+      <datamodelconfig aggregationtype="Avg" aggregationparam="0" measuretype="APIExecutionTime" fetchdynamicmeasures="true">
+        <chart axis.x.title="" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" maxsplitcharts="10" showname="true" maxdisplayitems="10" zoomable="true" charttype="StackedBarChart" aggregation.absolute="false" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="" splitcharts="false" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition agent="true" measure="true" host="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="MyApp" sourcecolor="RGB(222,81,33,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="81a1f159-aeec-36e1-8849-8ffab216fd08" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time easyTravel" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="19" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time easyTravel" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time easyTravel" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="easyTravel" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(13,32,89,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="8ebe1e89-8b92-3402-baa7-426f10d8c0aa" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Google" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="4" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time Google" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Google" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Google" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(77,115,229,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="948fce74-2e07-33d6-b1db-7229d09eae50" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Web Request" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="17" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time Web Request" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Web Request" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Web Request" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(27,177,141,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="986bb751-ed5c-3bd0-8d43-a3ed3eff1df7" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Log" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="12" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time Log" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Log" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Log" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(13,54,89,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="a3a73138-6413-30de-bb05-e642d9e9cd17" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Connection Pooling" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="3" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time Connection Pooling" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Connection Pooling" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Connection Pooling" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(242,242,166,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="ac054d4e-4c85-3584-92a3-6dc67c8f407c" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Sf" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="15" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time Sf" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Sf" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Sf" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(133,49,20,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="MyApp" parentid="fb6e8c42-0b16-364d-81a8-da6110549ce1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="b409c6e5-3e91-3dd5-8102-a842abc55440" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Codahale easyTravel mobile" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="easyTravel mobile" parentkeyid="Execution Time Codahale" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Codahale" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Codahale" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(172,242,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="MyApp" parentid="fec261e3-f979-3bc5-a77a-f9934fe6236e" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="b7efb633-22b2-307c-9097-4f916f4e47e5" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Terracotta easyTravel mobile" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="easyTravel mobile" parentkeyid="Execution Time Terracotta" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Terracotta" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Terracotta" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(242,166,234,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="b97fd1eb-e0d5-3b61-a796-b8240022388a" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Classloading" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time Classloading" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Classloading" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Classloading" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(222,168,33,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="e3bfe7a2-329a-3e2b-89d7-8b022bdf3872" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Servlet" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="14" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time Servlet" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Servlet" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Servlet" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(20,80,133,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="e6bd2ca8-f13c-34cb-89f7-967eecd1795d" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Hibernate" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="5" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time Hibernate" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Hibernate" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Hibernate" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(133,101,20,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="f603a991-8a77-3550-a35f-28b92cbe126b" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time JSP" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="10" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time JSP" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time JSP" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="JSP" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(133,101,20,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="MyApp" parentid="f603a991-8a77-3550-a35f-28b92cbe126b" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="f967476a-6ef3-3422-a566-4b759bf6f254" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time JSP MyApp Portal" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="MyApp Portal" parentkeyid="Execution Time JSP" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time JSP" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="JSP" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(133,49,20,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="fb6e8c42-0b16-364d-81a8-da6110549ce1" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Codahale" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="2" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time Codahale" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Codahale" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Codahale" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(13,54,89,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="MyApp" parentid="a3a73138-6413-30de-bb05-e642d9e9cd17" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="fb7fdd72-c032-34ef-80dc-af320010ca84" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Connection Pooling easyTravel mobile" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="easyTravel mobile" parentkeyid="Execution Time Connection Pooling" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Connection Pooling" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Connection Pooling" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(172,242,166,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="fec261e3-f979-3bc5-a77a-f9934fe6236e" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Terracotta" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="16" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time Terracotta" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Terracotta" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Terracotta" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(172,242,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="MyApp" parentid="fec261e3-f979-3bc5-a77a-f9934fe6236e" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="01ee00ff-c8eb-340a-a617-d432a75219f5" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Terracotta MyApp Portal" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="MyApp Portal" parentkeyid="Execution Time Terracotta" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Terracotta" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Terracotta" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(13,54,89,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="MyApp" parentid="a3a73138-6413-30de-bb05-e642d9e9cd17" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="040b162f-2285-3a9c-a46f-9f4ea543c8a4" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Connection Pooling Default Application" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="Default Application" parentkeyid="Execution Time Connection Pooling" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Connection Pooling" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Connection Pooling" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(26,136,178,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="0bf7948d-60bf-33f4-baad-9ac1461e29c3" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time JDBC" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="7" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time JDBC" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time JDBC" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="JDBC" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(13,54,89,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="MyApp" parentid="a3a73138-6413-30de-bb05-e642d9e9cd17" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="19e46e25-f6e0-374a-9587-46d9759472a4" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Connection Pooling MyApp Portal" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="MyApp Portal" parentkeyid="Execution Time Connection Pooling" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Connection Pooling" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Connection Pooling" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(222,118,33,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="1f457705-5727-36d9-8f94-711bd78df8da" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Java Web Services" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="11" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time Java Web Services" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Java Web Services" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Java Web Services" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(122,182,235,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="1ff3bda7-8712-3083-8ab6-7a2e8e20e09c" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time JSF" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="9" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time JSF" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time JSF" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="JSF" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(122,150,235,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="3b467758-66a8-3c83-88eb-ae4794ee663d" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Mvel2" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="13" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time Mvel2" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Mvel2" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Mvel2" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(133,49,20,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="MyApp" parentid="fb6e8c42-0b16-364d-81a8-da6110549ce1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="46414d9f-bcef-3a04-9449-b1220d8c7c78" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Codahale MyApp Portal" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="MyApp Portal" parentkeyid="Execution Time Codahale" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Codahale" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Codahale" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(166,185,242,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="68930a0f-34c0-3290-98b1-7f6b1decd7f1" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Icesoft" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="6" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time Icesoft" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Icesoft" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Icesoft" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(133,49,20,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="MyApp" parentid="fb6e8c42-0b16-364d-81a8-da6110549ce1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="6bc78d67-d288-39ba-99f8-313d20a67eaa" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time Codahale Default Application" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="Default Application" parentkeyid="Execution Time Codahale" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time Codahale" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="Codahale" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(88,20,133,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="764d1448-f70c-3aff-baaa-6ee443b4b376" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time JNDI" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="8" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time JNDI" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time JNDI" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="JNDI" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="MyApp" sourcecolor="RGB(77,187,229,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="MyApp" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="7f21ab7c-fa13-36bb-ab77-ef254a2b7063" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="ApiMeasure" fetchbaseline="false" unit="ms" name="Execution Time XML Processing" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="18" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="MyApp" application="" parentkeyid="Execution Time XML Processing" agentname="" metricsimpledisplayname="Execution Time" agenthost="" metrickeyid="Execution Time" keyid="Execution Time XML Processing" metricgroupkey="API Breakdown" collector="" measuretype="ApiMeasure" />
+            <displaysourceinfo apiname="XML Processing" measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="true" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://tag009441091191" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@1e1765e" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(0,0,0,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="3be8b670-2359-42bb-a4cb-a78c3cf8dd01">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="5" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="Segoe UI" style="NORMAL" height="1" />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 16.3-b01 (Sun Microsystems Inc.)
+Bundle-ManifestVersion: 2
+Bundle-Name: ProdFastPack
+Bundle-SymbolicName: ProdFastPack;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: prodfastpack.Activator
+Require-Bundle: com.dynatrace.diagnostics.sdk;bundle-version="4.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
